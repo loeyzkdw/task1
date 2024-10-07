@@ -1,40 +1,37 @@
 import Item from './Item.js';
 import Inventory from './Inventory.js';
-
-const inventory = new Inventory();
-
+const inventaris = new Inventory();
+// Membuat item baru
 const item1 = new Item(1, 'Laptop', 10, 1000);
 const item2 = new Item(2, 'Mouse', 50, 20);
-
-inventory.addItem(item1);
-inventory.addItem(item2);
-
-console.log('Initial Inventory:');
-console.log(inventory.listItems());
+// Menambahkan item ke dalam inventaris
+inventaris.addItem(item1);
+inventaris.addItem(item2);
+// Menampilkan inventaris awal
+console.log('Inventaris Awal:');
+console.log(inventaris.listItems());
 /**
  * Output yang diharapkan:
- * Initial Inventory:
- * ID: 1, Name: Laptop, Quantity: 10, Price: 1000
- * ID: 2, Name: Mouse, Quantity: 50, Price: 20
+ * Inventaris Awal:
+ * ID: 1, Nama: Laptop, Kuantitas: 10, Harga: 1000
+ * ID: 2, Nama: Mouse, Kuantitas: 50, Harga: 20
  */
-
-item1.updateDetails( 'Laptop', 8, 950);
-console.log('\nInventory after update:');
-console.log(inventory.listItems());
-
+// Memperbarui detail item1
+item1.updateDetails('Laptop', 8, 950);
+console.log('\nInventaris setelah pembaruan:');
+console.log(inventaris.listItems());
 /**
  * Output yang diharapkan:
- * Inventory after update:
- * ID: 1, Name: Laptop, Quantity: 8, Price: 950
- * ID: 2, Name: Mouse, Quantity: 50, Price: 20
+ * Inventaris setelah pembaruan:
+ * ID: 1, Nama: Laptop, Kuantitas: 8, Harga: 950
+ * ID: 2, Nama: Mouse, Kuantitas: 50, Harga: 20
  */
-
-inventory.removeItem(2);
-console.log('\nInventory after removal:');
-console.log(inventory.listItems());
-
+// Menghapus item2 dari inventaris
+inventaris.removeItem(2);
+console.log('\nInventaris setelah penghapusan:');
+console.log(inventaris.listItems());
 /**
  * Output yang diharapkan:
- * Inventory after removal:
- * ID: 1, Name: Laptop, Quantity: 8, Price: 950
+ * Inventaris setelah penghapusan:
+ * ID: 1, Nama: Laptop, Kuantitas: 8, Harga: 950
  */

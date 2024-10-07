@@ -8,8 +8,26 @@
  *     ID: ${id}, Name: ${name}, Quantity: ${quantity}, Price: ${price}
  *   ```
  */
-
-class Item {}
-
-// Jangan hapus kode di bawah ini!
-export default Item;
+class Item {
+    constructor(id, name, quantity, price) {
+      this.id = id;          
+      this.name = name;    
+      this.quantity = quantity; 
+      this.price = price;
+    }
+  
+    // Method untuk memperbarui detail item
+    updateDetails(newName, newQuantity, newPrice) {
+      this.name = newName;
+      this.quantity = newQuantity;
+      this.price = newPrice;
+    }
+  
+    // Method untuk menampilkan detail item
+    displayDetails() {
+      return `ID: ${this.id}, Name: ${this.name}, Quantity: ${this.quantity}, Price: ${this.price}`;
+    }
+  }
+  
+  // Jangan hapus kode di bawah ini!
+  export default Item;
